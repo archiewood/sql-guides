@@ -21,9 +21,10 @@ For the examples in this tutorial, we will use the 'orders' dataset.
 SELECT * FROM orders;
 ```
 
+
 <DataTable data={orders} />
 
-1. **Simple pivot with one pivot column aggregated by count: pivot by year**
+### Simple pivot with one pivot column aggregated by count: pivot by year
 
 ```sql
 SELECT *
@@ -32,7 +33,7 @@ ON EXTRACT(YEAR FROM order_datetime)
 GROUP BY category;
 ```
 
-2. **Pivot with sum as the aggregation: pivot by year**
+### Pivot with sum as the aggregation: pivot by year
 
 ```sql
 SELECT *
@@ -45,7 +46,7 @@ FROM PIVOT (
 ON year;
 ```
 
-3. **Pivot with average as the aggregation: pivot by year**
+### Pivot with average as the aggregation: pivot by year
 
 ```sql
 SELECT *
@@ -58,7 +59,7 @@ FROM PIVOT (
 ON year;
 ```
 
-4. **Complex pivot on two columns: pivot by category and item**
+### Complex pivot on two columns: pivot by category and item
 
 ```sql
 SELECT *

@@ -22,7 +22,7 @@ select * from orders;
 
 <DataTable data={orders} />
 
-1. **Simple pivot with one pivot field aggregated by count: pivot by year**
+### Simple pivot with one pivot field aggregated by count: pivot by year
 
 ```sql
 SELECT category, "2019", "2020", "2021" 
@@ -40,7 +40,7 @@ PIVOT (
 
 ```
 
-2. **Pivot with sum as the aggregation: pivot by year**
+### Pivot with sum as the aggregation: pivot by year
 
 ```sql
 SELECT *
@@ -54,7 +54,7 @@ FROM ( -- Source expression
 PIVOT (SUM(sales) FOR year IN (2019, 2020, 2021)) -- Aggregation function (SUM) and values to pivot (year)
 ```
 
-3. **Pivot with average as the aggregation: pivot by year**
+### Pivot with average as the aggregation: pivot by year
 
 ```sql
 SELECT *
@@ -68,7 +68,7 @@ FROM ( -- Source expression
 PIVOT (AVG(sales) FOR year IN (2019, 2020, 2021)) -- Aggregation function (AVG) and values to pivot (year)
 ```
 
-4. **Complex pivot on two fields: pivot by category and item**
+### Complex pivot on two fields: pivot by category and item
 ```sql
 SELECT *
 FROM ( -- Source expression

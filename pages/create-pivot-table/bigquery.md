@@ -25,7 +25,7 @@ SELECT * FROM orders;
 
 <DataTable data={orders} />
 
-1. **Simple pivot with one pivot field aggregated by count: pivot by year**
+### Simple pivot with one pivot field aggregated by count: pivot by year
 
 ```sql
 SELECT category, 
@@ -36,7 +36,7 @@ FROM `project.dataset.orders`
 GROUP BY category;
 ```
 
-2. **Pivot with sum as the aggregation: pivot by year**
+### Pivot with sum as the aggregation: pivot by year
 
 ```sql
 SELECT *
@@ -52,7 +52,7 @@ PIVOT (
 );
 ```
 
-3. **Pivot with average as the aggregation: pivot by year**
+### Pivot with average as the aggregation: pivot by year
 
 ```sql
 SELECT *
@@ -68,7 +68,7 @@ PIVOT (
 );
 ```
 
-4. **Complex pivot on two fields: pivot by category and item**
+### Complex pivot on two fields: pivot by category and item
 
 ```sql
 SELECT *
